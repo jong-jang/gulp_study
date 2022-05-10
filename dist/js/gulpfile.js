@@ -1,0 +1,1 @@
+const{src,dest,watch,series}=require("gulp"),GulpUglify=require("gulp-uglify");function streamTask(){return src("*.js").pipe(GulpUglify()).pipe(dest("dist"))}function watchTask(){watch("*.js",streamTask)}exports.default=series(streamTask,watchTask),console.log("watch test");

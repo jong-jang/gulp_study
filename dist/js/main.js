@@ -1,0 +1,1 @@
+const{src,dest,watch,series}=require("gulp"),GulpUglify=require("gulp-uglify"),concat=require("gulp-concat");function streamTask(){return src("*.js").pipe(concat("main.js")).pipe(GulpUglify()).pipe(dest("dist"))}function watchTask(){watch("*.js",streamTask)}function abc(){console.log("testagasdgag")}exports.default=series(streamTask,watchTask);
